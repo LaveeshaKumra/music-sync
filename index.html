@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Visualizer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="overlay" id="startOverlay">
+            <div class="start-content">
+                <h1>Music Visualizer</h1>
+                <p>Click start and allow microphone access to begin</p>
+                <button id="startButton">
+                    <i class="fas fa-play"></i>
+                    <span>Start Visualization</span>
+                </button>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <select id="visualizationType" class="modern-select">
+                    <option value="waveform">Smooth Wave</option>
+                    <option value="auroraWaves">Aurora Waves</option>
+                    <option value="bars">Frequency Bars</option>
+                    <option value="circular">Circular Wave</option>
+                    <option value="arctic">Arctic Waves</option>
+                    <option value="spectrum">Circular Spectrum</option>
+                    <option value="dna">DNA Helix</option>
+                    <option value="orbs">Floating Orbs</option>
+                    <option value="fractalTree">Fractal Tree</option>
+                </select>
+                <button id="shuffleButton" class="icon-button" title="Auto Shuffle Visualizations">
+                    <i class="fas fa-random"></i>
+                </button>
+                <button id="fullscreenButton" class="icon-button" title="Toggle Fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+        <canvas id="visualizer"></canvas>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
